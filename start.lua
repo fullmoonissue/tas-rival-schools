@@ -16,7 +16,6 @@ if(_G['loadSlot'] ~= nil) then
 end
 
 while (true) do
-
     local fc = emu.framecount();
 
     if(joypadSet[fc]) then
