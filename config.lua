@@ -1,9 +1,9 @@
-doSaveStateAt = 48722
+doSaveStateAt = 55080
 
 loadSlot = 0
 saveSlot = 0
 
-currentLesson = 20
+currentLesson = 22
 
 -- Some frame stats
 -- 757 frames between a lesson chosen and the first frame to scroll Hayato's text
