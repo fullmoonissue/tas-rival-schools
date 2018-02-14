@@ -1,25 +1,32 @@
-require('utils/lfs-extended')
+require('utils/class')
+require('utils/tas')
 
-function getJoypadSet(lessonsFolder)
-    getFilesThen(lessonsFolder, function(filePath)
-        require(filePath:gsub('.lua', ''))
+BizhawkJoypad = class()
+
+function BizhawkJoypad:getInputs(section)
+    local tas = Tas()
+
+    tas:iterateOver(section, function(filePath)
+        require(filePath)
     end)
 
-    local joypadSet = {};
-    for i = 0, currentLesson do
-        concatTables(joypadSet, _G['joypadSet' .. i])
+    local inputs = {}
+    for key, _ in pairs(_G) do
+        if(key:match('joypadSet%d+')) then
+            concatTables(inputs, _G[key])
+        end
     end
 
-    return joypadSet;
+    return inputs
 end
 
-function getOrderedJoypadFrames(joypadSet)
+function BizhawkJoypad:getOrderedFrames(inputs)
     -- Trick to keep the frames ordered
-    local joypadSetSorted = {}
-    for frame, _ in pairs(joypadSet) do
-        table.insert(joypadSetSorted, frame)
+    local orderedFrames = {}
+    for frame, _ in pairs(inputs) do
+        table.insert(orderedFrames, frame)
     end
-    table.sort(joypadSetSorted)
+    table.sort(orderedFrames)
 
-    return joypadSetSorted
+    return orderedFrames
 end

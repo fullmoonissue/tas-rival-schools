@@ -1,6 +1,6 @@
 doSaveStateAt = 76202
 
-loadSlot = 0
+loadSlot = nil
 saveSlot = 0
 
 currentLesson = 30

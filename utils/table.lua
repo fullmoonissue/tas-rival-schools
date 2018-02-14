@@ -4,10 +4,10 @@ function concatTables(initial, add)
         if(0 < f) then
             -- float are not easy not reach, so workaround (but doesn't work with modulo 10 numbers)
             for it = 0, tonumber(tostring(k):match("%.(%d+)")) - 1 do
-                initial[i + it] = v;
+                initial[i + it] = v
             end
         else
-            initial[k] = v;
+            initial[k] = v
         end
     end
 
