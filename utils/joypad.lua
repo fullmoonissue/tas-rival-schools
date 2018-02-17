@@ -1,27 +1,23 @@
 require('utils/class')
+require('utils/table')
 require('utils/tas')
 
 BizhawkJoypad = class()
 
 function BizhawkJoypad:getInputs(section)
     local tas = Tas()
-
-    tas:iterateOver(section, function(filePath)
-        require(filePath)
-    end)
+    local table = Table()
 
     local inputs = {}
-    for key, _ in pairs(_G) do
-        if(key:match('joypadSet%d+')) then
-            concatTables(inputs, _G[key])
-        end
-    end
+    tas:iterateOver(section, function(filePath)
+        table:join(inputs, require(filePath))
+    end)
 
     return inputs
 end
 
+-- Trick to keep the frames ordered
 function BizhawkJoypad:getOrderedFrames(inputs)
-    -- Trick to keep the frames ordered
     local orderedFrames = {}
     for frame, _ in pairs(inputs) do
         table.insert(orderedFrames, frame)

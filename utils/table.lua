@@ -1,4 +1,8 @@
-function concatTables(initial, add)
+require('utils/class')
+
+Table = class()
+
+function Table:join(initial, add)
     for k, v in pairs(add) do
         local i, f = math.modf(k)
         if(0 < f) then

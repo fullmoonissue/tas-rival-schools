@@ -1,4 +1,3 @@
-require('config')
 require('utils/class')
 require('utils/joypad')
 require('utils/table')
@@ -13,15 +12,17 @@ function Dump:process(section)
     local inputs = bj:getInputs(section)
     local orderedFrames = bj:getOrderedFrames(inputs)
 
-    local content = 'joypadSet = {' .. "\n"
+    local lines = {'joypadSet = {'}
     for index, frame in ipairs(orderedFrames) do
-        content = content .. string.rep(' ', 4) .. '[' .. frame .. '] = {' .. "\n"
+        lines[#lines + 1] = string.rep(' ', 4) .. '[' .. frame .. '] = {'
         for input, _ in pairs(inputs[orderedFrames[index]]) do
-            content = content .. string.rep(' ', 8) .. '["' .. input .. '"] = true,' .. "\n"
+            lines[#lines + 1] = string.rep(' ', 8) .. '["' .. input .. '"] = true,'
         end
-        content = content .. string.rep(' ', 4) .. '},' .. "\n"
+        lines[#lines + 1] = string.rep(' ', 4) .. '},'
     end
-    self.content = content .. '}'
+    lines[#lines + 1] = '}'
+
+    self.content = table.concat(lines, "\n")
 end
 
 function Dump:write()

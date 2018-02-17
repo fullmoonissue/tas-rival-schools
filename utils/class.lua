@@ -4,12 +4,6 @@ function class(base, init)
     if not init and type(base) == 'function' then
         init = base
         base = nil
-    elseif type(base) == 'table' then
-        -- our new class is a shallow copy of the base class!
-        for i, v in pairs(base) do
-            c[i] = v
-        end
-        c._base = base
     end
     -- the class will be the metatable for all its objects,
     -- and they will look up their methods in it.
@@ -31,16 +25,6 @@ function class(base, init)
         return obj
     end
     c.init = init
-    c.is_a = function(self, klass)
-        local m = getmetatable(self)
-        while m do
-            if m == klass then
-                return true
-            end
-            m = m._base
-        end
-        return false
-    end
     setmetatable(c, mt)
     return c
 end
