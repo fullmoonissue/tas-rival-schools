@@ -1,13 +1,14 @@
 require('utils/input')
-require('utils/shortcut')
+require('utils/macro')
+require('macro/hayato-lessons')
 
 -- Lesson 1.1
 local input = Input()
-shortcut = Shortcut(input)
+macroHayatoLessons = MacroHayatoLessons(Macro(input))
 
 input:cross(2084)
-shortcut:goToLesson(2086, 1, 1)
-shortcut:skipIntroText(2858)
+macroHayatoLessons:goToLesson(2086, 1, 1)
+macroHayatoLessons:skipIntroText(2858)
 --[[
     Begin of exercices
 ]]
@@ -34,7 +35,7 @@ input:right(3660)
 --[[
     End of exercices
 ]]
-shortcut:goToLessonScreen(4027)
+macroHayatoLessons:goToLessonScreen(4027)
 
 return input:all()
 

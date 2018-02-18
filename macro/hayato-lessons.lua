@@ -1,10 +1,10 @@
 require('utils/class')
 
-Shortcut = class(function(shortcut, input)
-    shortcut.input = input
+MacroHayatoLessons = class(function(macroHayatoLesson, macro)
+    macroHayatoLesson.input = macro:getInputManager()
 end)
 
-function Shortcut:goToLesson(currentFrame, lesson, subLesson)
+function MacroHayatoLessons:goToLesson(currentFrame, lesson, subLesson)
     for i = 1, (lesson - 1) do
         self.input:down(currentFrame)
         currentFrame = currentFrame + 2
@@ -24,7 +24,7 @@ function Shortcut:goToLesson(currentFrame, lesson, subLesson)
     return currentFrame
 end
 
-function Shortcut:skipIntroText(currentFrame)
+function MacroHayatoLessons:skipIntroText(currentFrame)
     self.input:cross(currentFrame)
 
     currentFrame = currentFrame + 2
@@ -33,7 +33,7 @@ function Shortcut:skipIntroText(currentFrame)
     return currentFrame
 end
 
-function Shortcut:goToLessonScreen(currentFrame)
+function MacroHayatoLessons:goToLessonScreen(currentFrame)
     self.input:cross(currentFrame)
 
     currentFrame = currentFrame + 2

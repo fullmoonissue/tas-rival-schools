@@ -16,7 +16,7 @@ local currentTas = nil
 
 -- Listing of the files of your tas (can be multiple)
 -- Requirements : have to be a multidimensional table (key : tas name, value : array with files without extension)
--- Why : io.popen not available and can't juggle with lfs on multi os
+-- Why : io.popen not available in BizHawk and can't juggle with LuaFileSystem on multi os
 local tasFiles = nil
 
 -- If a savestate have to be load before a tas, you specified it here

@@ -1,9 +1,10 @@
 require('utils/input')
-require('utils/shortcut')
+require('utils/macro')
+require('macro/hayato-lessons')
 
 -- Lesson 3.3
 local input = Input()
-shortcut = Shortcut(input)
+macroHayatoLessons = MacroHayatoLessons(Macro(input))
 
 return input:all()
 
