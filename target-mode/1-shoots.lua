@@ -1,9 +1,7 @@
 require('utils/input')
 
--- Init
 local input = Input()
 
--- Cross (Light Shot) ; Circle (Strong Shot) ; Triangle (Fire Shot)
 local cf
 -- First shoot
 cf = input:up(102402, 32)
