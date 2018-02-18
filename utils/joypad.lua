@@ -1,16 +1,13 @@
 require('utils/class')
-require('utils/fs')
-require('utils/table')
+local fs = require('utils/fs')
+local tableExtension = require('utils/table-extension')
 
 BizhawkJoypad = class()
 
 function BizhawkJoypad:getInputs(tas)
-    local fs = Fs()
-    local table = Table()
-
     local inputs = {}
     fs:iterateOver(tas, function(filePath)
-        table:join(inputs, require(filePath))
+        tableExtension:join(inputs, require(filePath))
     end)
 
     return inputs
@@ -26,3 +23,5 @@ function BizhawkJoypad:getOrderedFrames(inputs)
 
     return orderedFrames
 end
+
+return BizhawkJoypad

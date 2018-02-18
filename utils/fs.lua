@@ -1,7 +1,7 @@
 local config = require('config')
 require('utils/class')
 
-Fs = class()
+local Fs = class()
 
 function Fs:iterateOver(tas, callback)
     for _, file in ipairs(config['tasFiles'][tas]) do
@@ -10,3 +10,5 @@ function Fs:iterateOver(tas, callback)
         end
     end
 end
+
+return Fs;

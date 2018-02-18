@@ -1,9 +1,10 @@
-require('utils/input')
+local Input = require('utils/input')
 require('utils/macro')
 require('macro/hayato-lessons')
 
 -- Lesson 2.5
 local input = Input()
+
 macroHayatoLessons = MacroHayatoLessons(Macro(input))
 
 return input:all()

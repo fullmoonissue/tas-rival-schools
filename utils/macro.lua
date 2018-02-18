@@ -7,3 +7,5 @@ end)
 function Macro:getInputManager()
     return self.input
 end
+
+return Macro

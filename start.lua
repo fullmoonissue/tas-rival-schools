@@ -1,9 +1,8 @@
 local config = require('config')
-require('utils/joypad')
-require('utils/table')
+local bj = require('utils/joypad')
+local Mediator = require('utils/mediator')
 
 -- Retrieve the inputs of the current tas
-local bj = BizhawkJoypad()
 local joypadSet = bj:getInputs(config['currentTas'])
 
 -- Preload a savestate if needed
@@ -16,8 +15,16 @@ if(config['loadSlot'] ~= nil) then
     savestate.loadslot(config['loadSlot'])
 end
 
+-- Add the mediator for events management
+mediator = Mediator()
+
+-- Add custom overlay
+require('start_overlay')
+
 while (true) do
     local fc = emu.framecount()
+
+    mediator:publish({ 'overlay.frame-displayed' }, fc)
 
     if(joypadSet[fc]) then
         joypad.set(joypadSet[fc])

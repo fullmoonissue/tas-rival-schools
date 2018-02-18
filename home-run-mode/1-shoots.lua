@@ -1,5 +1,4 @@
-require('utils/input')
-
+local Input = require('utils/input')
 local input = Input()
 
 local cf

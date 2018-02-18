@@ -1,4 +1,4 @@
-require('utils/input')
+local Input = require('utils/input')
 
 -- Init
 local input = Input()

@@ -78,3 +78,5 @@ end
 function Input:r2(frame, iterations)
     return self:add(frame, iterations, {[self.currentPlayer .. ' R2'] = true})
 end
+
+return Input

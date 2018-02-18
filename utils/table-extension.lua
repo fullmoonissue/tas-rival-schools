@@ -1,8 +1,8 @@
 require('utils/class')
 
-Table = class()
+TableExtension = class()
 
-function Table:join(initial, add)
+function TableExtension:join(initial, add)
     for k, v in pairs(add) do
         local i, f = math.modf(k)
         if(0 < f) then
@@ -17,3 +17,5 @@ function Table:join(initial, add)
 
     return initial
 end
+
+return TableExtension

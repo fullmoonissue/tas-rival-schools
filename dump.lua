@@ -1,6 +1,5 @@
 require('utils/class')
-require('utils/joypad')
-require('utils/table')
+local bj = require('utils/joypad')
 
 Dump = class(function(d, outputFilename)
     d.content = nil
@@ -8,7 +7,6 @@ Dump = class(function(d, outputFilename)
 end)
 
 function Dump:process(tas)
-    local bj = BizhawkJoypad()
     local inputs = bj:getInputs(tas)
     local orderedFrames = bj:getOrderedFrames(inputs)
 
