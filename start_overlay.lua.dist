@@ -1,8 +1,3 @@
--- Example of custom overlay
 require('utils/overlay')
-require('overlay/framecount')
 
-local overlayFrameCount = OverlayFrameCount(Overlay(gui, memory))
-mediator:subscribe({ 'overlay.frame-displayed' }, function(fc)
-    overlayFrameCount:display(fc)
-end)
+-- Call your custom overlay by subscribing to the "frame.displayed" event

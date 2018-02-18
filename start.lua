@@ -24,7 +24,7 @@ require('start_overlay')
 while (true) do
     local fc = emu.framecount()
 
-    mediator:publish({ 'overlay.frame-displayed' }, fc)
+    mediator:publish({ 'frame.displayed' }, fc)
 
     if(joypadSet[fc]) then
         joypad.set(joypadSet[fc])
