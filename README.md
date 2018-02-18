@@ -26,7 +26,7 @@ _Soon_
 
 ## Tas of Shoot Out Mode
 
-_Soon_
+_Publication and details soon_
 
 ## Tas of Target Mode
 

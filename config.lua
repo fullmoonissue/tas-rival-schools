@@ -1,11 +1,11 @@
 -- Frame number to make a savestate
-local doSaveStateAt = 107214
+local doSaveStateAt = 105418
 
 -- Slot (Savestate) to load
-local loadSlot = 7
+local loadSlot = nil
 
 -- Slot (Savestate) to save (if doSaveStateAt is assigned)
-local saveSlot = 7
+local saveSlot = 8
 
 -- Current Tas
 --[[
@@ -18,7 +18,7 @@ local saveSlot = 7
     * shoot-out-mode : Play in the penalty kick shoot-out (with Roberto)
 
 ]]
-local currentTas = 'home-run-mode'
+local currentTas = 'shoot-out-mode'
 
 -- The function io.popen is not available in Bizhawk and I can't have lfs available for Windows
 -- (Bizhawk is running on a Windows VM but my os isn't)
@@ -62,6 +62,10 @@ local tasSections = {
         '1-shoots',
     },
     ['target-mode'] = {
+        '0-init',
+        '1-shoots',
+    },
+    ['shoot-out-mode'] = {
         '0-init',
         '1-shoots',
     },

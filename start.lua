@@ -19,8 +19,6 @@ end
 while (true) do
     local fc = emu.framecount()
 
-    gui.drawText(5, 75, fc, 'white', 'black', 30)
-
     if(joypadSet[fc]) then
         joypad.set(joypadSet[fc])
     end
