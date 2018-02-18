@@ -1,7 +1,3 @@
-# Files
-config.lua
-start_overlay.lua
-
 # Folders
 dump/*
 !dump/.gitkeep
