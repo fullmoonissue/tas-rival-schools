@@ -2,11 +2,8 @@
 
 ## Memory address
 
-    --- During fight ---
     P1 Life : 1EFA00
     P1 Combo Level : 1EFC18
-    --- Home Run Mode ---
-    Distance of the first shoot : 1F1F18
 
 ## Tas of Hayato's lessons
 

@@ -1,2 +1,6 @@
+# Files
+config.lua
+
+# Folders
 dump/*
 !dump/.gitkeep
