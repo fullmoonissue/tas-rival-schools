@@ -7,9 +7,9 @@ Dump = class(function(d, outputFilename)
     d.outputFilename = outputFilename
 end)
 
-function Dump:process(section)
+function Dump:process(tas)
     local bj = BizhawkJoypad()
-    local inputs = bj:getInputs(section)
+    local inputs = bj:getInputs(tas)
     local orderedFrames = bj:getOrderedFrames(inputs)
 
     local lines = {'joypadSet = {'}

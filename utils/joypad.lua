@@ -1,15 +1,15 @@
 require('utils/class')
+require('utils/fs')
 require('utils/table')
-require('utils/tas')
 
 BizhawkJoypad = class()
 
-function BizhawkJoypad:getInputs(section)
-    local tas = Tas()
+function BizhawkJoypad:getInputs(tas)
+    local fs = Fs()
     local table = Table()
 
     local inputs = {}
-    tas:iterateOver(section, function(filePath)
+    fs:iterateOver(tas, function(filePath)
         table:join(inputs, require(filePath))
     end)
 
