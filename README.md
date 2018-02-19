@@ -48,9 +48,9 @@ https://www.youtube.com/watch?v=Fa3WBI1GD6s
               N
 ```
 
-Even if Raizo decrements points, he is the start of a combo which will give more points that not touching him.
+Even if Raizo decrements points, it will start a combo which will give more points than not touching him.
 
-When a combo is done, I smash Shoma in last because he give 1000 points which will be very increased if he's hit on last sequence of the combo.
+When a combo is done, I smash Shoma in last because he give more points.
 
 One optimisation is to smash the two Shoma on the same time on the seventh shoot.
 

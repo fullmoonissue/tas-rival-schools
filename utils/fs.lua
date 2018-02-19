@@ -6,7 +6,7 @@ local Fs = class()
 function Fs:iterateOver(tas, callback)
     for _, file in ipairs(files[tas]) do
         if file ~= '.' and file ~= '..' then
-            callback(tas .. '/' .. file)
+            callback('tas/' .. tas .. '/' .. file)
         end
     end
 end
