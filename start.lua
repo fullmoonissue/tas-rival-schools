@@ -1,4 +1,5 @@
 local config = require('config')
+local preloads = require('preloads')
 local bj = require('utils/joypad')
 local Mediator = require('utils/mediator')
 
@@ -6,8 +7,8 @@ local Mediator = require('utils/mediator')
 local joypadSet = bj:getInputs(config['currentTas'])
 
 -- Preload a savestate if needed
-if(config['loadSavestate'][config['currentTas']] ~= nil) then
-    savestate.load('savestate/' .. config['loadSavestate'][config['currentTas']])
+if(preloads[config['currentTas']] ~= nil) then
+    savestate.load('savestate/' .. preloads[config['currentTas']])
 end
 
 -- Load the current savestate

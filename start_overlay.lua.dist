@@ -1,3 +1,1 @@
-require('utils/overlay')
-
 -- Call your custom overlay by subscribing to the "frame.displayed" event

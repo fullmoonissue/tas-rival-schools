@@ -14,14 +14,9 @@ local saveSlot = nil
 -- Requirements : have to be a string (and the name of a folder in your root project)
 local currentTas = nil
 
--- If a savestate have to be load before a tas, you specified it here
--- Requirements : have to be a table (key : tas name, value : name of the savestate [present in the savestate folder])
-local loadSavestate = nil
-
 return {
     ['currentTas'] = currentTas,
     ['doSaveStateAt'] = doSaveStateAt,
-    ['loadSavestate'] = loadSavestate,
     ['loadSlot'] = loadSlot,
     ['saveSlot'] = saveSlot,
 }
