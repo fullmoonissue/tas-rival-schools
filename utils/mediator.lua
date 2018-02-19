@@ -1,5 +1,5 @@
 -- Code from https://github.com/Olivine-Labs/mediator_lua
--- (no installed with luarocks because of misunderstandings about custom install)
+-- (not installed with luarocks because of misunderstandings about custom install)
 
 local function getUniqueId(obj)
     return tonumber(tostring(obj):match(':%s*[0xX]*(%x+)'), 16)

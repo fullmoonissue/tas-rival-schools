@@ -1,6 +1,8 @@
 require('utils/class')
 local bj = require('utils/joypad')
 
+-- @todo : move to utils and move the code from dump-lua-table here
+
 Dump = class(function(d, outputFilename)
     d.content = nil
     d.outputFilename = outputFilename
