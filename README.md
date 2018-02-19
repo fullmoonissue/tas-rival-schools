@@ -11,21 +11,19 @@ _Rewriting in progress_
 
 ## Tas of Home Run Mode
 
+All shoots was done without moving. The distances are the farther I could have.
+
+One possible optimisation is to try to move before shooting.
+
+An other one is to shoot for nothing before (give some run-up maybe).
+
+I saw a 141 meters done [here](https://www.youtube.com/watch?v=pnikyC--gL4&t=5m), worth an other try to optimize.
+
 ### Publication
 
 https://www.youtube.com/watch?v=Fa3WBI1GD6s
 
-### Todo
-
-* Is it possible to always make 141 meters (like [here](https://www.youtube.com/watch?v=pnikyC--gL4&t=5m)) ?
-
 ## Tas of Service Mode
-
-### Publication
-
-https://www.youtube.com/watch?v=z3zAUFpW_Pw
-
-### Details
 
 ```
 --- Caption and points ---
@@ -50,13 +48,29 @@ https://www.youtube.com/watch?v=z3zAUFpW_Pw
               N
 ```
 
+Even if Raizo decrements points, he is the start of a combo which will give more points that not touching him.
+
+When a combo is done, I smash Shoma in last because he give 1000 points which will be very increased if he's hit on last sequence of the combo.
+
+One optimisation is to smash the two Shoma on the same time on the seventh shoot.
+
+### Publication
+
+https://www.youtube.com/watch?v=z3zAUFpW_Pw
+
 ## Tas of Shoot Out Mode
+
+Nothing special, just no move as the goal
 
 ### Publication
 
 https://www.youtube.com/watch?v=zUQm26ttaK4
 
 ## Tas of Target Mode
+
+Curving ball and frame knocking give more points.
+
+Touching two frames in the same shoot is it possible ?
 
 ### Publication
 
