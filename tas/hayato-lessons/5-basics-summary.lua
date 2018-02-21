@@ -4,79 +4,37 @@ require('macro/hayato-lessons')
 
 -- Lesson 1.5
 local input = Input()
+local macroHayatoLessons = MacroHayatoLessons(Macro(input))
 
-macroHayatoLessons = MacroHayatoLessons(Macro(input))
+input:cross(10694)
+macroHayatoLessons:goToLesson(10696, 1, 5)
+macroHayatoLessons:skipIntroText(11471)
+--[[
+    Begin of exercices
+]]
+-- Exercice 1
+input:right(11625)
+-- Exercice 2
+input:up(11697)
+-- Exercice 3
+input:circle(11769)
+-- Exercice 4
+input:square(11841)
+-- Exercice 5
+input:down(11913, 6)
+-- Exercice 6
+input:left(11990)
+-- Exercice 7
+input:triangle(12062)
+-- Exercice 8
+input:up(12134)
+-- Exercice 9
+input:cross(12206)
+-- Exercice 10
+input:circle(12278)
+--[[
+    End of exercices
+]]
+macroHayatoLessons:goToLessonScreen(12652)
 
 return input:all()
-
---joypadSet5 = {
---    [10694] = {
---        ["P1 Cross"] = true,
---    },
---    [10696] = {
---        ["P1 Cross"] = true,
---    },
---    [10698] = {
---        ["P1 Right"] = true,
---    },
---    [10700] = {
---        ["P1 Right"] = true,
---    },
---    [10702] = {
---        ["P1 Right"] = true,
---    },
---    [10704] = {
---        ["P1 Right"] = true,
---    },
---    [10706] = {
---        ["P1 Cross"] = true,
---    },
---    [11471] = {
---        ["P1 Cross"] = true,
---    },
---    [11473] = {
---        ["P1 Cross"] = true,
---    },
---    [11625] = {
---        ["P1 Right"] = true,
---    },
---    [11697] = {
---        ["P1 Up"] = true,
---    },
---    [11769] = {
---        ["P1 Circle"] = true,
---    },
---    [11841] = {
---        ["P1 Square"] = true,
---    },
---    [11913.6] = {
---        ["P1 Down"] = true,
---    },
---    [11990] = {
---        ["P1 Left"] = true,
---    },
---    [12062] = {
---        ["P1 Triangle"] = true,
---    },
---    [12134] = {
---        ["P1 Up"] = true,
---    },
---    [12206] = {
---        ["P1 Cross"] = true,
---    },
---    [12278] = {
---        ["P1 Circle"] = true,
---    },
---    [12652] = {
---        ["P1 Cross"] = true,
---    },
---    [12654] = {
---        ["P1 Cross"] = true,
---    },
---    [12659] = {
---        ["P1 Down"] = true,
---    },
---    [12661] = {
---        ["P1 Cross"] = true,
---    },
---}

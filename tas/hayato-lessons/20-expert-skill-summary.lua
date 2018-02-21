@@ -3,144 +3,57 @@ require('utils/macro')
 require('macro/hayato-lessons')
 
 -- Lesson 4.5
+local cf
 local input = Input()
+local macro = Macro(input)
+local macroHayatoLessons = MacroHayatoLessons(macro)
+local macroTricks = MacroTricks(macro)
 
-macroHayatoLessons = MacroHayatoLessons(Macro(input))
+input:cross(48732)
+macroHayatoLessons:goToLesson(48734, 4, 5)
+macroHayatoLessons:skipIntroText(49526)
+--[[
+    Begin of exercices
+]]
+-- Exercice 1
+macroTricks:burningVigor(49680)
+-- Exercice 2
+cf = macroTricks:steppingRight(49875)
+input:right(cf, 39)
+macroTricks:rivalLauncher(49918)
+input:up(49919)
+input:square(49974)
+-- Exercice 3
+input:right(50128)
+input:left(50194)
+input:square(50195)
+-- Exercice 4
+cf = macroTricks:steppingRight(50291)
+input:right(cf, 35)
+macroTricks:tardyCounter(50329)
+-- Exercice 5
+input:right(50399, 41)
+input:down(50502)
+input:square(50503)
+-- Exercice 6
+macroTricks:burningVigor(50596)
+-- Exercice 7
+cf = macroTricks:steppingRight(50789)
+input:right(cf, 25)
+macroTricks:rivalLauncher(50845)
+input:up(50846)
+input:square(50901)
+-- Exercice 8
+macroTricks:tardyCounter(51056)
+-- Exercice 9
+macroTricks:burningVigor(51126)
+-- Exercice 10
+cf = macroTricks:steppingRight(51313)
+input:right(cf, 35)
+macroTricks:tardyCounter(51351)
+--[[
+    End of exercices
+]]
+macroHayatoLessons:goToLessonScreen(51728)
 
 return input:all()
-
---joypadSet20 = {
---    [48732] = {
---        ["P1 Cross"] = true,
---    },
---    [48734] = {
---        ["P1 Down"] = true,
---    },
---    [48736] = {
---        ["P1 Down"] = true,
---    },
---    [48738] = {
---        ["P1 Down"] = true,
---    },
---    [48740] = {
---        ["P1 Cross"] = true,
---    },
---    [48742] = {
---        ["P1 Right"] = true,
---    },
---    [48744] = {
---        ["P1 Right"] = true,
---    },
---    [48746] = {
---        ["P1 Right"] = true,
---    },
---    [48748] = {
---        ["P1 Right"] = true,
---    },
---    [48750] = {
---        ["P1 Cross"] = true,
---    },
---    [49526] = {
---        ["P1 Cross"] = true,
---    },
---    [49528] = {
---        ["P1 Cross"] = true,
---    },
---    [49680] = {
---        ["P1 L1"] = true,
---    },
---    [49875] = {
---        ["P1 Right"] = true,
---    },
---    [49877.39] = {
---        ["P1 Right"] = true,
---    },
---    [49918] = {
---        ["P1 Right"] = true,
---        ["P1 Down"] = true,
---        ["P1 Triangle"] = true,
---    },
---    [49919] = {
---        ["P1 Up"] = true,
---    },
---    [49974] = {
---        ["P1 Square"] = true,
---    },
---    [50128] = {
---        ["P1 Right"] = true,
---    },
---    [50194] = {
---        ["P1 Left"] = true,
---    },
---    [50195] = {
---        ["P1 Square"] = true,
---    },
---    [50291] = {
---        ["P1 Right"] = true,
---    },
---    [50293.35] = {
---        ["P1 Right"] = true,
---    },
---    [50329] = {
---        ["P1 Right"] = true,
---        ["P1 Triangle"] = true,
---    },
---    [50399.41] = {
---        ["P1 Right"] = true,
---    },
---    [50502] = {
---        ["P1 Down"] = true,
---    },
---    [50503] = {
---        ["P1 Square"] = true,
---    },
---    [50596] = {
---        ["P1 L1"] = true,
---    },
---    [50789] = {
---        ["P1 Right"] = true,
---    },
---    [50791.25] = {
---        ["P1 Right"] = true,
---    },
---    [50845] = {
---        ["P1 Right"] = true,
---        ["P1 Down"] = true,
---        ["P1 Triangle"] = true,
---    },
---    [50846] = {
---        ["P1 Up"] = true,
---    },
---    [50901] = {
---        ["P1 Square"] = true,
---    },
---    [51056] = {
---        ["P1 Right"] = true,
---        ["P1 Triangle"] = true,
---    },
---    [51126] = {
---        ["P1 L1"] = true,
---    },
---    [51313] = {
---        ["P1 Right"] = true,
---    },
---    [51315.35] = {
---        ["P1 Right"] = true,
---    },
---    [51351] = {
---        ["P1 Right"] = true,
---        ["P1 Triangle"] = true,
---    },
---    [51728] = {
---        ["P1 Cross"] = true,
---    },
---    [51730] = {
---        ["P1 Cross"] = true,
---    },
---    [51735] = {
---        ["P1 Down"] = true,
---    },
---    [51737] = {
---        ["P1 Cross"] = true,
---    },
---}

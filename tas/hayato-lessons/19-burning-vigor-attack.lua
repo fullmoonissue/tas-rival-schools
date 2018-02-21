@@ -4,70 +4,29 @@ require('macro/hayato-lessons')
 
 -- Lesson 4.4
 local input = Input()
+local macro = Macro(input)
+local macroHayatoLessons = MacroHayatoLessons(macro)
+local macroTricks = MacroTricks(macro)
 
-macroHayatoLessons = MacroHayatoLessons(Macro(input))
+input:cross(46448)
+macroHayatoLessons:goToLesson(46450, 4, 4)
+macroHayatoLessons:skipIntroText(47255)
+--[[
+    Begin of exercices
+]]
+-- Exercice 1
+macroTricks:burningVigor(47409)
+-- Exercice 2
+macroTricks:burningVigor(47606)
+-- Exercice 3
+macroTricks:burningVigor(47737)
+-- Exercice 4
+macroTricks:burningVigor(47907)
+-- Exercice 5
+macroTricks:burningVigor(48071)
+--[[
+    End of exercices
+]]
+macroHayatoLessons:goToLessonScreen(48546)
 
 return input:all()
-
---joypadSet19 = {
---    [46448] = {
---        ["P1 Cross"] = true,
---    },
---    [46450] = {
---        ["P1 Down"] = true,
---    },
---    [46452] = {
---        ["P1 Down"] = true,
---    },
---    [46454] = {
---        ["P1 Down"] = true,
---    },
---    [46456] = {
---        ["P1 Cross"] = true,
---    },
---    [46458] = {
---        ["P1 Right"] = true,
---    },
---    [46460] = {
---        ["P1 Right"] = true,
---    },
---    [46462] = {
---        ["P1 Right"] = true,
---    },
---    [46464] = {
---        ["P1 Cross"] = true,
---    },
---    [47255] = {
---        ["P1 Cross"] = true,
---    },
---    [47257] = {
---        ["P1 Cross"] = true,
---    },
---    [47409] = {
---        ["P1 L1"] = true,
---    },
---    [47606] = {
---        ["P1 L1"] = true,
---    },
---    [47737] = {
---        ["P1 L1"] = true,
---    },
---    [47907] = {
---        ["P1 L1"] = true,
---    },
---    [48071] = {
---        ["P1 L1"] = true,
---    },
---    [48546] = {
---        ["P1 Cross"] = true,
---    },
---    [48548] = {
---        ["P1 Cross"] = true,
---    },
---    [48553] = {
---        ["P1 Down"] = true,
---    },
---    [48555] = {
---        ["P1 Cross"] = true,
---    },
---}

@@ -1,7 +1,7 @@
 require('utils/class')
 
-MacroHayatoLessons = class(function(macroHayatoLesson, macro)
-    macroHayatoLesson.input = macro:getInputManager()
+MacroHayatoLessons = class(function(macroHayatoLessons, macro)
+    macroHayatoLessons.input = macro:getInputManager()
 end)
 
 function MacroHayatoLessons:goToLesson(currentFrame, lesson, subLesson)

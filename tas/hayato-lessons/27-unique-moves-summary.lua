@@ -3,125 +3,46 @@ require('utils/macro')
 require('macro/hayato-lessons')
 
 -- Lesson 6.2
+local cf
 local input = Input()
+local macro = Macro(input)
+local macroHayatoLessons = MacroHayatoLessons(macro)
+local macroTricks = MacroTricks(macro)
 
-macroHayatoLessons = MacroHayatoLessons(Macro(input))
+input:cross(65665)
+macroHayatoLessons:goToLesson(65667, 6, 2)
+macroHayatoLessons:skipIntroText(66437)
+--[[
+    Begin of exercices
+]]
+-- Exercice 1
+macroTricks:steppingLeft(66591)
+-- Exercice 2
+cf = macroTricks:steppingRight(66654)
+input:right(cf, 18)
+macroTricks:throw(66674)
+-- Exercice 3
+macroTricks:textbookCombo4(66858, true)
+-- Exercice 4
+macroTricks:ditchOut(66984)
+-- Exercice 5
+macroTricks:teamUp(67056)
+input:up(67363)
+-- Exercice 6
+cf = macroTricks:steppingLeft(67425)
+input:left(cf, 35)
+macroTricks:safeFall(67477)
+-- Exercice 7
+macroTricks:ditchInto(67540)
+-- Exercice 8
+macroTricks:steppingLeft(67612)
+-- Exercice 9
+macroTricks:highJump(67689)
+-- Exercice 10
+macroTricks:textbookCombo2(67771)
+--[[
+    End of exercices
+]]
+macroHayatoLessons:goToLessonScreen(68154)
 
 return input:all()
-
---joypadSet27 = {
---    [65665] = {
---        ["P1 Cross"] = true,
---    },
---    [65667] = {
---        ["P1 Down"] = true,
---    },
---    [65669] = {
---        ["P1 Down"] = true,
---    },
---    [65671] = {
---        ["P1 Down"] = true,
---    },
---    [65673] = {
---        ["P1 Down"] = true,
---    },
---    [65675] = {
---        ["P1 Down"] = true,
---    },
---    [65677] = {
---        ["P1 Cross"] = true,
---    },
---    [65679] = {
---        ["P1 Right"] = true,
---    },
---    [65681] = {
---        ["P1 Cross"] = true,
---    },
---    [66437] = {
---        ["P1 Cross"] = true,
---    },
---    [66439] = {
---        ["P1 Cross"] = true,
---    },
---    [66591] = {
---        ["P1 Left"] = true,
---    },
---    [66593] = {
---        ["P1 Left"] = true,
---    },
---    [66654] = {
---        ["P1 Right"] = true,
---    },
---    [66656.18] = {
---        ["P1 Right"] = true,
---    },
---    [66674] = {
---        ["P1 R2"] = true,
---    },
---    [66858] = {
---        ["P1 Square"] = true,
---    },
---    [66860] = {
---        ["P1 Square"] = true,
---    },
---    [66874] = {
---        ["P1 Triangle"] = true,
---    },
---    [66885] = {
---        ["P1 Right"] = true,
---        ["P1 Triangle"] = true,
---    },
---    [66984] = {
---        ["P1 Down"] = true,
---        ["P1 Circle"] = true,
---        ["P1 Cross"] = true,
---    },
---    [67056] = {
---        ["P1 Square"] = true,
---        ["P1 Cross"] = true,
---    },
---    [67363] = {
---        ["P1 Up"] = true,
---    },
---    [67425.35] = {
---        ["P1 Left"] = true,
---    },
---    [67477] = {
---        ["P1 Cross"] = true,
---        ["P1 Circle"] = true,
---    },
---    [67540] = {
---        ["P1 Cross"] = true,
---        ["P1 Circle"] = true,
---    },
---    [67612] = {
---        ["P1 Left"] = true,
---    },
---    [67614] = {
---        ["P1 Left"] = true,
---    },
---    [67689] = {
---        ["P1 Down"] = true,
---    },
---    [67690] = {
---        ["P1 Up"] = true,
---    },
---    [67771] = {
---        ["P1 Square"] = true,
---    },
---    [67773] = {
---        ["P1 Square"] = true,
---    },
---    [68154] = {
---        ["P1 Cross"] = true,
---    },
---    [68156] = {
---        ["P1 Cross"] = true,
---    },
---    [68161] = {
---        ["P1 Down"] = true,
---    },
---    [68163] = {
---        ["P1 Cross"] = true,
---    },
---}

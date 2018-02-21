@@ -4,76 +4,37 @@ require('macro/hayato-lessons')
 
 -- Lesson 1.4
 local input = Input()
+local macroHayatoLessons = MacroHayatoLessons(Macro(input))
 
-macroHayatoLessons = MacroHayatoLessons(Macro(input))
+input:cross(8532)
+macroHayatoLessons:goToLesson(8534, 1, 4)
+macroHayatoLessons:skipIntroText(9299)
+--[[
+    Begin of exercices
+]]
+-- Exercice 1
+input:circle(9453)
+-- Exercice 2
+input:circle(9525)
+-- Exercice 3
+input:cross(9597)
+-- Exercice 4
+input:cross(9669)
+-- Exercice 5
+input:circle(9741)
+-- Exercice 6
+input:cross(9813)
+-- Exercice 7
+input:circle(9885)
+-- Exercice 8
+input:cross(9957)
+-- Exercice 9
+input:circle(10029)
+-- Exercice 10
+input:cross(10101)
+--[[
+    End of exercices
+]]
+macroHayatoLessons:goToLessonScreen(10473)
 
 return input:all()
-
---joypadSet4 = {
---    [8532] = {
---        ["P1 Cross"] = true,
---    },
---    [8534] = {
---        ["P1 Cross"] = true,
---    },
---    [8536] = {
---        ["P1 Right"] = true,
---    },
---    [8538] = {
---        ["P1 Right"] = true,
---    },
---    [8540] = {
---        ["P1 Right"] = true,
---    },
---    [8542] = {
---        ["P1 Cross"] = true,
---    },
---    [9299] = {
---        ["P1 Cross"] = true,
---    },
---    [9301] = {
---        ["P1 Cross"] = true,
---    },
---    [9453] = {
---        ["P1 Circle"] = true,
---    },
---    [9525] = {
---        ["P1 Circle"] = true,
---    },
---    [9597] = {
---        ["P1 Cross"] = true,
---    },
---    [9669] = {
---        ["P1 Cross"] = true,
---    },
---    [9741] = {
---        ["P1 Circle"] = true,
---    },
---    [9813] = {
---        ["P1 Cross"] = true,
---    },
---    [9885] = {
---        ["P1 Circle"] = true,
---    },
---    [9957] = {
---        ["P1 Cross"] = true,
---    },
---    [10029] = {
---        ["P1 Circle"] = true,
---    },
---    [10101] = {
---        ["P1 Cross"] = true,
---    },
---    [10473] = {
---        ["P1 Cross"] = true,
---    },
---    [10475] = {
---        ["P1 Cross"] = true,
---    },
---    [10480] = {
---        ["P1 Down"] = true,
---    },
---    [10482] = {
---        ["P1 Cross"] = true,
---    },
---}
