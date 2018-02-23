@@ -52,11 +52,12 @@ Even if Raizo decrements points, it will start a combo which will give more poin
 
 When a combo is done, I smash Shoma in last because he give more points.
 
-One optimisation is to smash the two Shoma on the same time on the seventh shoot.
+Score : 42300
 
 ### Publication
 
-https://www.youtube.com/watch?v=z3zAUFpW_Pw
+* https://www.youtube.com/watch?v=wj8WxkoHJx8
+* obsolete : https://www.youtube.com/watch?v=z3zAUFpW_Pw
 
 ## Tas of Shoot Out Mode
 
