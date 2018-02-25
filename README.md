@@ -69,10 +69,23 @@ https://www.youtube.com/watch?v=zUQm26ttaK4
 
 ## Tas of Target Mode
 
+    -- Memory Address
+    1EFA70 : Bottom <--> Top
+    1EFA6C : Left <--> Right
+    1C681C : Current Score
+
+```
+-- Panel's Location
+500 300 200 300 500
+400 300 200 300 400
+300 200 100 200 300
+```
+
 Curving ball and frame knocking give more points.
 
-Touching two frames in the same shoot is it possible ?
+Score : 8600
 
 ### Publication
 
-https://www.youtube.com/watch?v=MzZUei7VKw4
+* https://www.youtube.com/watch?v=tLSHkkx0yy4
+* obsolete : https://www.youtube.com/watch?v=MzZUei7VKw4

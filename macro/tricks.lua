@@ -165,3 +165,47 @@ function MacroTricks:burningVigor(frame, iterations)
             }
     )
 end
+
+function MacroTricks:upLeft(frame, iterations)
+    return self.input:add(
+            frame,
+            iterations,
+            {
+                [self.input.currentPlayer .. ' Up'] = true,
+                [self.input.currentPlayer .. ' Left'] = true,
+            }
+    )
+end
+
+function MacroTricks:upRight(frame, iterations)
+    return self.input:add(
+            frame,
+            iterations,
+            {
+                [self.input.currentPlayer .. ' Up'] = true,
+                [self.input.currentPlayer .. ' Right'] = true,
+            }
+    )
+end
+
+function MacroTricks:downLeft(frame, iterations)
+    return self.input:add(
+            frame,
+            iterations,
+            {
+                [self.input.currentPlayer .. ' Down'] = true,
+                [self.input.currentPlayer .. ' Left'] = true,
+            }
+    )
+end
+
+function MacroTricks:downRight(frame, iterations)
+    return self.input:add(
+            frame,
+            iterations,
+            {
+                [self.input.currentPlayer .. ' Down'] = true,
+                [self.input.currentPlayer .. ' Right'] = true,
+            }
+    )
+end
