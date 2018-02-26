@@ -5,7 +5,7 @@
     P1 Life : 1EFA00
     P1 Combo Level : 1EFC18
 
-## Tas of Hayato's lessons
+## Tas of Lesson Mode
 
 _Rewriting in progress_
 
@@ -69,11 +69,12 @@ https://www.youtube.com/watch?v=zUQm26ttaK4
 
 ## Tas of Target Mode
 
-    -- Memory Address
-    1EFA70 : Bottom <--> Top
-    1EFA6C : Left <--> Right
-    1C681C : Current Score
-
+```
+-- Memory Address
+1EFA70 : Bottom <--> Top
+1EFA6C : Left <--> Right
+1C681C : Current Score
+```
 ```
 -- Panel's Location
 500 300 200 300 500
