@@ -5,18 +5,32 @@ MacroLessonMode = class(function(macroLessonMode, macro)
 end)
 
 function MacroLessonMode:goToLesson(currentFrame, lesson, subLesson)
-    for i = 1, (lesson - 1) do
-        self.input:down(currentFrame)
-        currentFrame = currentFrame + 2
+    if lesson < 4 then
+        for i = 1, (lesson - 1) do
+            self.input:down(currentFrame)
+            currentFrame = currentFrame + 2
+        end
+    else
+        for i = 6, lesson, -1 do
+            self.input:up(currentFrame)
+            currentFrame = currentFrame + 2
+        end
     end
 
     self.input:cross(currentFrame)
 
     currentFrame = currentFrame + 2
 
-    for i = 1, (subLesson - 1) do
-        self.input:right(currentFrame)
-        currentFrame = currentFrame + 2
+    if subLesson < 4 then
+        for i = 1, (subLesson - 1) do
+            self.input:right(currentFrame)
+            currentFrame = currentFrame + 2
+        end
+    else
+        for i = 5, subLesson, -1 do
+            self.input:left(currentFrame)
+            currentFrame = currentFrame + 2
+        end
     end
 
     self.input:cross(currentFrame)

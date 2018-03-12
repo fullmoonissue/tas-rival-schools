@@ -5,5 +5,7 @@ OverlayFrameCount = class(function(overlayFrameCount, overlay)
 end)
 
 function OverlayFrameCount:display(fc)
-    self.overlay:getMonitor().drawText(5, 75, fc, 'white', 'black', 30)
+    local monitor = self.overlay:getMonitor()
+    monitor.drawText(5, 60, 'Frame', 'white', 'black', 15)
+    monitor.drawText(5, 75, fc, 'white', 'black', 20)
 end

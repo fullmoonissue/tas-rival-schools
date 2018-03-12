@@ -4,6 +4,10 @@ MacroTricks = class(function(macroTricks, macro)
     macroTricks.input = macro:getInputManager()
 end)
 
+function MacroTricks:crouch(currentFrame)
+    return self.input:down(currentFrame, 6)
+end
+
 function MacroTricks:steppingLeft(currentFrame)
     self.input:left(currentFrame)
 
@@ -99,8 +103,8 @@ function MacroTricks:teamUp(frame, iterations)
     )
 end
 
-function MacroTricks:textbookCombo2(currentFrame)
-    self.input:square(currentFrame)
+function MacroTricks:hinataTextbookCombo2(currentFrame)
+    self.input:cross(currentFrame)
 
     currentFrame = currentFrame + 2
     self.input:square(currentFrame)
@@ -108,24 +112,24 @@ function MacroTricks:textbookCombo2(currentFrame)
     return currentFrame
 end
 
-function MacroTricks:textbookCombo3(currentFrame)
-    currentFrame = self:textbookCombo2(currentFrame)
+function MacroTricks:hinataTextbookCombo3(currentFrame)
+    currentFrame = self:hinataTextbookCombo2(currentFrame)
 
-    currentFrame = currentFrame + 16
+    currentFrame = currentFrame + 21
     self.input:triangle(currentFrame)
 
     return currentFrame
 end
 
-function MacroTricks:textbookCombo4(currentFrame, reverse)
-    currentFrame = self:textbookCombo3(currentFrame)
+function MacroTricks:hinataTextbookCombo4(currentFrame, reverse)
+    currentFrame = self:hinataTextbookCombo3(currentFrame)
 
-    currentFrame = currentFrame + 13
+    currentFrame = currentFrame + 14
     self.input:add(
             currentFrame,
             1,
             {
-                [self.input.currentPlayer .. ' ' .. ((reverse or false) and 'Right' or 'Left')] = true,
+                [self.input.currentPlayer .. ' ' .. ((reverse or false) and 'Left' or 'Right')] = true,
                 [self.input.currentPlayer .. ' Triangle'] = true,
             }
     )
@@ -133,19 +137,19 @@ function MacroTricks:textbookCombo4(currentFrame, reverse)
     return currentFrame
 end
 
-function MacroTricks:rivalLauncher(frame, iterations)
+function MacroTricks:hinataRivalLauncher(frame, reverse)
     return self.input:add(
             frame,
-            iterations,
+            1,
             {
                 [self.input.currentPlayer .. ' Down'] = true,
-                [self.input.currentPlayer .. ' Right'] = true,
-                [self.input.currentPlayer .. ' Triangle'] = true,
+                [self.input.currentPlayer .. ' ' .. ((reverse or false) and 'Left' or 'Right')] = true,
+                [self.input.currentPlayer .. ' Circle'] = true,
             }
     )
 end
 
-function MacroTricks:tardyCounter(frame, iterations)
+function MacroTricks:hinataTardyCounter(frame, iterations)
     return self.input:add(
             frame,
             iterations,
