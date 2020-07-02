@@ -1,7 +1,4 @@
-local Input = require('utils/input')
-
--- Init
-local input = Input()
+local input = require('core/input')
 
 input:left(101638)
 input:down(101639)

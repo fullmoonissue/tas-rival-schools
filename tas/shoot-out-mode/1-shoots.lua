@@ -1,7 +1,7 @@
-local Input = require('utils/input')
-local input = Input()
+local input = require('core/input')
 
 local cf
+
 -- First shoot (Human)
 cf = input:cross(102434)
 cf = input:left(cf + 1, 23)

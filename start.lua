@@ -1,39 +1,55 @@
-local config = require('config')
-local preloads = require('preloads')
-local bj = require('utils/joypad')
-local Mediator = require('utils/mediator')
+local play = require('configuration/play')
+local currentTas = play['currentTas']
+local loadSlot = play['loadSlot']
+
+local paths = require('configuration/paths')
+
+local files = {}
+local cFiles = require(paths['files'])
+if (cFiles[currentTas] ~= nil) then
+    for _, file in ipairs(cFiles[currentTas]) do
+        files[#files + 1] = table.concat({ paths['tas'], currentTas, file }, '/')
+    end
+end
 
 -- Retrieve the inputs of the current tas
-local joypadSet = bj:getInputs(config['currentTas'])
+local joypadSet = require('core/input').merge(files)
 
--- Preload a savestate if needed
-if(preloads[config['currentTas']] ~= nil) then
-    savestate.load('savestate/' .. preloads[config['currentTas']])
+-- Preload a savestate, if exists
+local preloads = require(paths['preloads'])
+if (preloads[currentTas] ~= nil) then
+    savestate.load(table.concat({ paths['savestate'], preloads[currentTas] }, '/'))
 end
 
--- Load the current savestate
-if(config['loadSlot'] ~= nil) then
-    savestate.loadslot(config['loadSlot'])
+-- Load the current savestate, if defined and exists
+if (loadSlot ~= nil) then
+    savestate.loadslot(loadSlot)
 end
 
--- Add the mediator for events management
-mediator = Mediator()
+-- Add overlays
+local mediator = require('mediator')()
+require('plugins/overlay/collection').applySubscriptions(mediator)
 
--- Add custom overlay
-require('start_overlay')
+-- Screenshot configuration
+local screenshotConfiguration = require(paths['screenshot'])
 
 while (true) do
+    -- Retrieve the current frame ...
     local fc = emu.framecount()
 
+    -- ... then dispatch it (for overlays) ...
     mediator:publish({ 'frame.displayed' }, fc)
 
-    if(joypadSet[fc]) then
+    -- ... then "push" the inputs (if inputs are set for this frame) ...
+    if (joypadSet[fc]) then
         joypad.set(joypadSet[fc])
     end
 
-    if(config['doSaveStateAt'] ~= nil and config['saveSlot'] ~= nil and fc == config['doSaveStateAt']) then
-        savestate.saveslot(config['saveSlot'])
+    -- ... then do a screenshot if set for this frame ...
+    if (screenshotConfiguration[fc]) then
+        client.screenshot(screenshotConfiguration[fc])
     end
 
+    -- ... and forward to the next frame
     emu.frameadvance()
 end

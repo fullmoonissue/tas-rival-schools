@@ -1,9 +1,5 @@
-# The config.lua file have to be copied from config.lua.dist then edited
-config.lua
+# The file configuration/play.lua will always change during the creation of the tas and is not valuable for versioning
+configuration/play.lua
 
-# The start_overlay.lua file have to be copied from start_overlay.lua.dist then edited (or not)
-start_overlay.lua
-
-# Dumps are not kept
-dump/*
-!dump/.gitkeep
+# Rocks installed from make install
+lua_modules

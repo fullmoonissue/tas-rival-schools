@@ -1,5 +1,4 @@
-local Input = require('utils/input')
-local input = Input()
+local input = require('core/input')
 
 local cf
 -- First shoot

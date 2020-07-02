@@ -1,8 +1,7 @@
-local Input = require('utils/input')
+local input = require('core/input')
 
 -- Init
 local cf = 1385
-local input = Input()
 
 cf = input:start(cf)
 cf = input:start(cf + 123)
