@@ -16,7 +16,8 @@ https://www.youtube.com/watch?v=Fa3WBI1GD6s
 
 ### Publication & Details
 
-* https://www.youtube.com/watch?v=wj8WxkoHJx8
+* https://www.youtube.com/watch?v=q4O89Mz8Gr4
+* obsolete : https://www.youtube.com/watch?v=wj8WxkoHJx8
 * obsolete : https://www.youtube.com/watch?v=z3zAUFpW_Pw
 
 ## Tas of Shoot Out Mode
