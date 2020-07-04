@@ -32,20 +32,3 @@ https://www.youtube.com/watch?v=zUQm26ttaK4
 
 * https://www.youtube.com/watch?v=tLSHkkx0yy4
 * obsolete : https://www.youtube.com/watch?v=MzZUei7VKw4
-
-## Watch from BizHawk
-
-1. Rename the config.lua.dist to config.lua and start_overlay.lua.dist to start_overlay.lua.
-2. Inside config.lua, put one the following value to `currentTas` to choose which tas you want to see :
-
-    * home-run-mode : Play in the Home Run Contest (with Shoma)
-    * lesson-mode : Hayato will teach you the skills you need to know to become a master
-    * service-mode : Practice serving volleyballs (with Natsu)
-    * shoot-out-mode : Play in the penalty kick shoot-out (with Roberto)
-    * target-mode : Knock out the score panels set up at the goal (with Roberto)
-
-3. In BizHawk, go to Tools -> Lua Console and open the start.lua file.
-
-## Bk2 archive
-
-_Will be done later..._
