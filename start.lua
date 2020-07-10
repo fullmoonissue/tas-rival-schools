@@ -28,10 +28,18 @@ end
 
 -- Add overlays
 local mediator = require('mediator')()
-require('plugins/overlay/collection').applySubscriptions(mediator)
+if 'service-mode' == currentTas then
+    require('plugins/overlay/service-mode').applySubscriptions(mediator)
+else
+    require('plugins/overlay/collection').applySubscriptions(mediator)
+end
 
 -- Screenshot configuration
 local screenshotConfiguration = require(paths['screenshot'])
+
+if 'service-mode' == currentTas then
+    client.SetGameExtraPadding(0, 0, 350, 0)
+end
 
 while (true) do
     -- Retrieve the current frame ...
