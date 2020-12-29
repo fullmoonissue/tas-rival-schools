@@ -1,0 +1,19 @@
+SystemID PSX
+0949B8	d	u	0	MainRAM	Distance ball from Shoma
+1F1F0C	b	u	0	MainRAM	Nb shoots
+1EF91A	w	u	0	MainRAM	Position X
+1EF912	w	u	0	MainRAM	Position Y ?
+1EFACA	w	u	0	MainRAM	Position Y ?
+1F1F12	w	u	0	MainRAM	Ball Speed
+1F1F0E	w	u	0	MainRAM	Distance Current Shoot
+1F1F18	w	u	0	MainRAM	Top 1
+1F1F1A	w	u	0	MainRAM	Top 2
+1F1F1C	w	u	0	MainRAM	Top 3
+1F1F1E	w	u	0	MainRAM	Top 4
+1F1F20	w	u	0	MainRAM	Top 5
+1F1F22	w	u	0	MainRAM	Top 6
+1F1F24	w	u	0	MainRAM	Top 7
+1F1F26	w	u	0	MainRAM	Top 8
+1F1F28	w	u	0	MainRAM	Top 9
+1F1F2A	w	u	0	MainRAM	Top 10
+

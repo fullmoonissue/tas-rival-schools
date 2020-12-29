@@ -1,5 +1,5 @@
-# The file configuration/play.lua will always change during the creation of the tas and is not valuable for versioning
-configuration/play.lua
-
-# Rocks installed from make install
+assets/publication/videos/*
+!assets/publication/videos/.gitkeep
+db/*
+!db/.gitkeep
 lua_modules
