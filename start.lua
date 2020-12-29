@@ -1,5 +1,17 @@
 local play = require('configuration/play')
 local currentTas = play['currentTas']
+
+local homeRunScripts
+if currentTas == 'home-run-mode' then
+    homeRunScripts = require('scripts/home-run')
+    local f = io.open('db/home_run.db', 'r')
+    if f ~= nil then
+        io.close(f)
+    else
+        homeRunScripts.prepareDatabase()
+    end
+end
+
 local loadSlot = play['loadSlot']
 
 local paths = require('configuration/paths')
@@ -28,8 +40,10 @@ end
 
 -- Add overlays
 local mediator = require('mediator')()
-if 'service-mode' == currentTas then
+if 'service-mode' == currentTas and play['service-mode']['show-overlay'] then
     require('plugins/overlay/service-mode').applySubscriptions(mediator)
+elseif 'home-run-mode' == currentTas then
+    require('plugins/overlay/home-run-mode').applySubscriptions(mediator)
 else
     require('plugins/overlay/collection').applySubscriptions(mediator)
 end
@@ -37,8 +51,10 @@ end
 -- Screenshot configuration
 local screenshotConfiguration = require(paths['screenshot'])
 
-if 'service-mode' == currentTas then
+if 'service-mode' == currentTas and play['service-mode']['show-overlay'] then
     client.SetGameExtraPadding(0, 0, 350, 0)
+else
+    client.SetGameExtraPadding(0, 0, 0, 0)
 end
 
 while (true) do

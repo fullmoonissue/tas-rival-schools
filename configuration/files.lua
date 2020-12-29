@@ -4,8 +4,7 @@ return {
         '1-lessons',
     },
     ['home-run-mode'] = {
-        '0-init',
-        '1-shoots',
+        'init-and-shoots',
     },
     ['target-mode'] = {
         '0-init',

@@ -1,0 +1,112 @@
+Title : [TAS] Rival Schools : Home Run Mode - 697m
+
+ℹ️  About the tas of Home Run Mode
+
+* Tools / Code
+
+- Emulator used : BizHawk 2.4.0 (https://github.com/TASVideos/BizHawk)
+- TAS Scaffolding Project used : Version 3.2.2 (https://github.com/fullmoonissue/tas-scaffolding/tree/3.2.2)
+- Source code of the tas : https://github.com/fullmoonissue/tas-rival-schools
+- Aims for maximum score
+- Aim to write a script leading to the game benchmarking itself
+
+* Description
+
+This is one of the four mini games, home run mode.
+You play Shoma and you have to shoot the ball as far as you can 10 times.
+Your 5 best distances are kept.
+You have to finish the history with Shoma on the hardest difficulty to unlock it.
+
+* Results
+
+Total : 697m
+
+Top 1  : 140m
+Top 2  : 140m
+Top 3  : 139m
+Top 4  : 139m
+Top 5  : 139m
+-------------
+Top 6  : 139m
+Top 7  : 138m
+Top 8  : 138m
+Top 9  : 135m
+Top 10 : 134m
+
+* Video
+
+Bizhawk, Record Configuration :
+- Writer : FFMPEG Writer
+- Video Format : MP4
+
+* Savestate
+
+All the mini games are unlocked at the main screen thanks to the preloaded savestate (mini-games-prepared).
+
+🏁  (Self-)Benchmark
+
+* History
+
+After the first TAS (cf Related TAS), I was wondering if it was possible to brute-force every shoot possibilities.
+After a couple of calculations, it seems not worthy to do it this way (All Positions X * All Positions Y * A Bunch of Shoots * Time By Shoot = Way too long)
+
+So, I've decided to RAM Search some interesting values from my first TAS which could enable a way to test less combinations.
+
+Firstly, I've found that the speed of the ball (Word 0x1F1F12) is changing at each frame when thrown and the values are between 95 and 104.
+Here, I made a hypothesis : The higher the speed (when shooting), the higher the distance.
+But, after making a dedicated database of tests, no, it wasn't true.
+
+Secondly, I've found a RAM value which representing the distance of the ball coming to Shoma before shooting it (Dword 0x0949B8) and the values are between 20 and 24.
+Hypothesis : Link between this distance and the shooting distance ?
+After an other database of tests for it, nope, not related.
+
+Thirdly, after making a third database to check that the positioning of Shoma (at least on the Y axis, Word 0x1EF912) doesn't change anything, the last idea was about the existence of a seed.
+
+That's why, I've decided to make a script that will start the mini game from different frame (aka seed), do the shoots and see if results can be different.
+
+* Script
+
+(The details to launch the execution of the script on your side are listed in the README.md on github)
+
+So, these are the steps of the script :
+- select the Home Run mini game after waiting an amount of frames to change the seed
+- for each shoot to do (10 in total), 5 tries (cf above, distance between 20 and 24) will be made in order to select the best
+- after all shoots done, redo the steps but waiting 1 extra frame before selecting the mini game
+
+With this setup, I was able to see that there is a seed. Indeed, the loading image (while the mini-game is loading) was different and the final results was too.
+The first seed (waiting 0 frame) and the second seed (waiting 1 frame) gave the same result : 696m.
+But with the third seed (waiting 2 frames), I had a bigger (and the biggest) result : 697m.
+I've tried with the 4th and 5th seed but it wasn't a better result.
+
+* Conclusion
+
+I was quite happy to see the game doing all the benchmark by itself.
+Indeed, all was scripted :
+- the compute of the number of frames to wait before selecting the mini game
+- a savestate was made before the 5 tries then loaded when the result of a try was retrievable (a write in the database was made before)
+- after the 5 tries, a request into the database was made to get the best shoot and make a 6th shoot (the best of the 5)
+- after all the shoots was made, the initial savestate (at the main screen of the game) was loaded (to repeat the process with an other seed)
+
+💪  Possible improvements
+
+The script explained above wasn't flawless, there was some issues :
+- very few frame of lag are present but if the frame of a shoot is just before (or at the same frame), the shoot isn't fired
+- some desyncs appeared sometimes after a long running time of the script
+
+I've made only a little bunch of seeds but if some fixes applied allow to let the script running a longer time, more seeds can be tested.
+It may reveal if it's possible to get at least a result of 700m (or even the potentially maximum : 705m (141m for one shoot is possible but I haven't seen more)).
+
+🔗  Related TAS
+
+* Other mini games TAS
+
+Target Mode : https://www.youtube.com/watch?v=tLSHkkx0yy4
+Shoot Out Mode : https://www.youtube.com/watch?v=zUQm26ttaK4
+Service Mode : https://www.youtube.com/watch?v=reDowrCmnwY
+Lesson Mode : https://www.youtube.com/watch?v=e1RWETgbzBQ
+
+* Obsolete TAS
+
+- 693m : https://www.youtube.com/watch?v=Fa3WBI1GD6s
+
+🍿  Enjoy 🍿
