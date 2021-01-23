@@ -51,7 +51,10 @@ end
 -- Screenshot configuration
 local screenshotConfiguration = require(paths['screenshot'])
 
-if 'service-mode' == currentTas and play['service-mode']['show-overlay'] then
+if ('home-run-mode' == currentTas and play['home-run-mode']['benchmark'] and play['home-run-mode']['show-benchmark-overlay'])
+or ('home-run-mode' == currentTas and not play['home-run-mode']['benchmark'] and play['home-run-mode']['show-overlay'])
+or ('service-mode' == currentTas and play['service-mode']['show-overlay'])
+then
     client.SetGameExtraPadding(0, 0, 350, 0)
 else
     client.SetGameExtraPadding(0, 0, 0, 0)

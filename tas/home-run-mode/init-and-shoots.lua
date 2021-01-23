@@ -1,6 +1,6 @@
 local input = require('core/input')
 
-local nbWaitingFrames = 2 -- RNG / Seed
+local nbWaitingFrames = 23 -- RNG / Seed
 
 --[[ Init ]]--
 
@@ -19,27 +19,27 @@ input:cross(cf + 258)
 
 --[[ Shoots ]]--
 
--- First shoot (139m)
-cf = input:circle(102611)
--- Second shoot (138m)
-cf = input:circle(103135)
--- Third shoot (134m)
-cf = input:circle(103659)
--- Forth shoot (139m)
-cf = input:circle(104191)
--- Fifth shoot (135m)
-cf = input:circle(104711)
--- Sixth shoot (138m)
-cf = input:circle(105234)
--- Seventh shoot (139m)
-cf = input:circle(105757)
--- Eighth shoot (140m)
-cf = input:circle(106279)
--- Ninth shoot (140m)
-cf = input:circle(106801)
--- Tenth shoot (139m)
-cf = input:circle(107333)
+-- First shoot (135m)
+cf = input:circle(102638)
+-- Second shoot (141m)
+cf = input:circle(103157)
+-- Third shoot (140m)
+cf = input:circle(103680)
+-- Forth shoot (137m)
+cf = input:circle(104214)
+-- Fifth shoot (140m)
+cf = input:circle(104735)
+-- Sixth shoot (139m)
+cf = input:circle(105259)
+-- Seventh shoot (140m)
+cf = input:circle(105781)
+-- Eighth shoot (137m)
+cf = input:circle(106306)
+-- Ninth shoot (137m)
+cf = input:circle(106827)
+-- Tenth shoot (135m)
+cf = input:circle(107351)
 
--- Total : 697m
+-- Total : 700m
 
 return input:all()
