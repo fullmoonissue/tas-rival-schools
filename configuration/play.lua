@@ -18,7 +18,9 @@ return {
     ['currentTas'] = currentTas,
     ['loadSlot'] = loadSlot,
     ['home-run-mode'] = {
-        ['collect-stats'] = false,
+        ['show-overlay'] = false,
+        ['benchmark'] = false,
+        ['show-benchmark-overlay'] = false,
     },
     ['service-mode'] = {
         ['show-overlay'] = true,

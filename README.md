@@ -16,15 +16,26 @@ Then, launch Bizhawk, select the ROM and go to `Tools` -> `Lua Console` and open
 
 ### Publications
 
-* [Score : 697m](https://www.youtube.com/watch?v=G6M1CgxPLuU)
+* [Score : 700m](https://www.youtube.com/watch?v=tDp-lRBLIi8)
+* [Score : 700m (benchmark)](https://www.youtube.com/watch?v=tsNDcvV4XDE)
+* Obsolete : [Score : 697m](https://www.youtube.com/watch?v=G6M1CgxPLuU)
 * Obsolete : [Score : 693m](https://www.youtube.com/watch?v=Fa3WBI1GD6s)
 
 ### Benchmark
 
-If you want to see the benchmark :
+If you want to launch the benchmark :
 
 - in `configuration/files.lua`, comment `home-run-mode` > `init-and-shoots` (this will not play the tas' inputs)
-- in `configuration/play.lua`, assign `true` to `home-run-mode` > `collect-stats` (this will enable the benchmark)
+- in `configuration/play.lua`, assign `true` to `home-run-mode` > `benchmark` (this will enable the benchmark)
+
+Then repeat the section `Watch in Bizhawk`.
+
+### Overlay
+
+If you want to see the overlay of the TAS of :
+
+- home run : in `configuration/play.lua`, assign `true` to `home-run-mode` > `show-overlay`
+- benchmark : in `configuration/play.lua`, assign `true` to `home-run-mode` > `show-benchmark-overlay`
 
 Then repeat the section `Watch in Bizhawk`.
 

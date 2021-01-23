@@ -1,0 +1,26 @@
+Title : [TAS] [Benchmark] Rival Schools : Home Run Mode - 700m
+
+ℹ️  About the tas of the benchmark of Home Run Mode
+
+* Tools / Code
+
+- Emulator used : BizHawk 2.4.0 (https://github.com/TASVideos/BizHawk)
+- TAS Scaffolding Project used : Version 3.2.2 (https://github.com/fullmoonissue/tas-scaffolding/tree/3.2.2)
+- Source code of the tas : https://github.com/fullmoonissue/tas-rival-schools
+- Aims to benchmark the Home Run Mode by making attempts for each shoot and select the best ones
+
+* Video
+
+Bizhawk, Record Configuration :
+- Writer : FFMPEG Writer
+- Video Format : MP4
+
+* Preloaded savestate
+
+All the mini games are unlocked at the main screen thanks to the preloaded savestate (mini-games-prepared).
+
+* Benchmark
+
+All the code about the benchmark is located in the github project.
+
+🍿  Enjoy 🍿

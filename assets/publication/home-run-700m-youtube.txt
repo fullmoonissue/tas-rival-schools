@@ -1,0 +1,63 @@
+Title : [TAS] Rival Schools : Home Run Mode - 700m
+
+ℹ️  About the tas of Home Run Mode
+
+* Tools / Code
+
+- Emulator used : BizHawk 2.4.0 (https://github.com/TASVideos/BizHawk)
+- TAS Scaffolding Project used : Version 3.2.2 (https://github.com/fullmoonissue/tas-scaffolding/tree/3.2.2)
+- Source code of the tas : https://github.com/fullmoonissue/tas-rival-schools
+- Aims for maximum score
+
+* Description
+
+This is one of the four mini games, home run mode.
+You play Shoma and you have to shoot the ball as far as you can 10 times.
+Your 5 best distances are kept.
+You have to finish the history with Shoma on the hardest difficulty to unlock it.
+
+* Benchmark
+
+An associated benchmark has been made here : https://www.youtube.com/watch?v=tsNDcvV4XDE
+
+* Results
+
+Total : 700m
+
+Top 1  : 141m
+Top 2  : 140m
+Top 3  : 140m
+Top 4  : 140m
+Top 5  : 139m
+-------------
+Top 6  : 137m
+Top 7  : 137m
+Top 8  : 137m
+Top 9  : 135m
+Top 10 : 135m
+
+* Video
+
+Bizhawk, Record Configuration :
+- Writer : FFMPEG Writer
+- Video Format : MP4
+
+* Preloaded savestate
+
+All the mini games are unlocked at the main screen thanks to the preloaded savestate (mini-games-prepared).
+
+🔗  Related TAS
+
+* Other mini games TAS
+
+Target Mode : https://www.youtube.com/watch?v=tLSHkkx0yy4
+Shoot Out Mode : https://www.youtube.com/watch?v=zUQm26ttaK4
+Service Mode : https://www.youtube.com/watch?v=reDowrCmnwY
+Lesson Mode : https://www.youtube.com/watch?v=e1RWETgbzBQ
+
+* Obsolete TAS
+
+- 697m : https://www.youtube.com/watch?v=G6M1CgxPLuU
+- 693m : https://www.youtube.com/watch?v=Fa3WBI1GD6s
+
+🍿  Enjoy 🍿
