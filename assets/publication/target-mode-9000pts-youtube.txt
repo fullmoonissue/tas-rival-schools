@@ -1,0 +1,76 @@
+Title : [TAS] Rival Schools : Target Mode - 9000 points
+
+ℹ️  About the TAS
+
+* Tools / Code
+
+- Emulator used : BizHawk 2.4.0 (https://github.com/TASVideos/BizHawk)
+- TAS Scaffolding Project used : Version 3.2.2 (https://github.com/fullmoonissue/tas-scaffolding/tree/3.2.2)
+- Source code of the tas : https://github.com/fullmoonissue/tas-rival-schools
+- Aims for maximum score
+
+* Preloaded Savestate
+
+All the mini games are unlocked at the main screen thanks to the preloaded savestate (mini-games-prepared).
+
+* Video
+
+Bizhawk, Record Configuration :
+- Writer : FFMPEG Writer
+- Video Format : MP4
+
+⚽️  About the Game
+
+* Description
+
+This is the tas of one of the four mini games, target mode.
+You play Roberto and you have to score by shooting on panels.
+You have to finish the history with Roberto on the hardest difficulty to unlock it.
+
+* Memory address
+
+- (Word) 1C681C : Score
+- (Word) 1F1F5E : Panel Points
+- (Word) 1F1F60 : Art Points
+- (Word) 1F1F62 : Frame Points
+- (Word) 1EFA70 : (Direction) Up / Down
+- (Word) 1EFA6E : (Direction) Left / Right
+
+* Panels
+
+500 | 300 | 200 | 300 | 500
+400 | 300 | 200 | 300 | 400
+300 | 200 | 100 | 200 | 300
+
+* Points
+
+- Panel Points : When panels (between 1 and 4 by shoot) are smashed
+- Art Points : When the ball is curved
+- Frame Points : When a frame is knocked
+
+🏁  Results
+
+Total : 9000 points
+
+- Shoot 1 : 2600
+- Shoot 2 : 2600
+- Shoot 3 : 1200
+- Shoot 4 : 1200
+- Shoot 5 : 900
+- Shoot 6 : 500
+
+🔗  Related TAS
+
+* Other mini games TAS
+
+Home Run Mode : https://www.youtube.com/watch?v=tDp-lRBLIi8
+Shoot Out Mode : https://www.youtube.com/watch?v=zUQm26ttaK4
+Service Mode : https://www.youtube.com/watch?v=reDowrCmnwY
+Lesson Mode : https://www.youtube.com/watch?v=e1RWETgbzBQ
+
+* Obsolete TAS
+
+- 8600 points : https://www.youtube.com/watch?v=tLSHkkx0yy4
+- 7100 points : https://www.youtube.com/watch?v=MzZUei7VKw4
+
+🍿  Enjoy 🍿

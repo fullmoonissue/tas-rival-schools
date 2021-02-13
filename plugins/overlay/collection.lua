@@ -1,8 +1,7 @@
 -- List of Lua functions available for BizHawk
 -- http://tasvideos.org/Bizhawk/LuaFunctions.html#tabber
 
-local paths = require('configuration/paths')
-local game = require(paths['game'])
+local play = require('configuration/play')
 
 local Overlay = {}
 
@@ -13,7 +12,9 @@ end
 
 local function applySubscriptions(mediator)
     mediator:subscribe({ 'frame.displayed' }, function(fc)
-        framecount(fc)
+        if play['currentTas'] ~= 'target-mode' then
+            framecount(fc)
+        end
     end)
 end
 

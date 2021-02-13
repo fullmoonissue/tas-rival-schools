@@ -1,43 +1,63 @@
 local input = require('core/input')
-local macro = require('plugins/macro/collection')
 
-local cf = 102401
+local cf
 
--- First shoot
-cf = macro.upRight(cf + 1, 27)
-cf = input:up(cf + 1, 32)
+-- First shoot (Score : 2600 ; Total : 2600)
+cf = 102402
+input:right(cf, 27)
+cf = input:up(cf, 57)
 cf = input:cross(cf + 1)
-cf = macro.downLeft(cf + 1, 45)
-cf = input:left(cf + 1, 1)
--- Second shoot
-cf = macro.upLeft(cf + 316, 27)
-cf = input:up(cf + 1, 32)
+input:down(cf + 1, 45)
+cf = input:left(cf + 1, 46)
+
+-- Second shoot (Score : 2600 ; Total : 5200)
+cf = cf + 304
+input:l1(cf)
+input:left(cf, 27)
+cf = input:up(cf, 59)
 cf = input:cross(cf + 1)
-cf = macro.downRight(cf + 1, 45)
-cf = input:right(cf + 1, 1)
--- Third shoot
-cf = macro.upRight(cf + 316, 30)
-cf = input:up(cf + 1, 10)
+input:down(cf + 1, 45)
+cf = input:right(cf + 1, 46)
+
+-- Third shoot (Score : 1200 ; Total : 6400)
+cf = cf + 304
+input:l1(cf)
+input:l1(cf + 2)
+input:right(cf, 30)
+cf = input:up(cf, 40)
 cf = input:cross(cf + 1)
-cf = macro.downLeft(cf + 1, 2)
-cf = input:left(cf + 1, 44)
--- Fourth shoot
-cf = macro.upLeft(cf + 188, 40)
-cf = input:up(cf + 1, 19)
+input:down(cf + 1, 2)
+cf = input:left(cf + 1, 45)
+
+-- Fourth shoot (Score : 1200 ; Total : 7600)
+cf = cf + 188
+input:l1(cf)
+input:l1(cf + 2)
+input:l1(cf + 4)
+input:left(cf, 31)
+cf = input:up(cf, 41)
 cf = input:cross(cf + 1)
-cf = macro.downRight(cf + 1, 15)
-cf = input:right(cf + 1, 31)
--- Fifth shoot
-cf = macro.upRight(cf + 312, 38)
-cf = input:up(cf + 1, 7)
+input:down(cf + 1, 3)
+cf = input:right(cf + 1, 47)
+
+-- Fifth shoot (Score : 900 ; Total : 8500)
+cf = cf + 188
+input:l1(cf)
+input:l1(cf + 2)
+input:l1(cf + 4)
+input:l1(cf + 6)
+input:right(cf, 30)
+cf = input:up(cf, 50)
 cf = input:cross(cf + 1)
-cf = macro.downLeft(cf + 1, 5)
-cf = input:left(cf + 1, 38)
--- Sixth shoot
-cf = macro.upLeft(cf + 193, 18)
-cf = input:up(cf + 1, 32)
+input:down(cf + 1, 10)
+cf = input:left(cf + 1, 30)
+
+-- Sixth shoot (Score : 500 ; Total : 9000)
+cf = cf + 202
+input:right(cf, 30)
+cf = input:up(cf, 25)
 cf = input:cross(cf + 1)
-cf = macro.downRight(cf + 1, 12)
-cf = input:right(cf + 1, 24)
+input:up(cf + 1, 59)
+cf = input:left(cf + 1, 20)
 
 return input:all()
