@@ -1,0 +1,10 @@
+SystemID PSX
+1C681C	w	u	0	MainRAM	Score
+1F1F5E	w	u	0	MainRAM	Panel Points
+1F1F60	w	u	0	MainRAM	Art Points
+1F1F62	w	u	0	MainRAM	Frame Points
+0	S	_	1		
+1EFA70	w	u	0	MainRAM	Direction : Up / Down
+1EFA6E	w	u	0	MainRAM	Direction : Left / Right
+0	S	_	1		
+

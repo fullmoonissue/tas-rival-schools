@@ -12,7 +12,7 @@ local loadSlot = nil
     * shoot-out-mode : Play in the penalty kick shoot-out (with Roberto)
     * target-mode : Knock out the score panels set up at the goal (with Roberto)
 ]]
-local currentTas = 'home-run-mode'
+local currentTas = 'target-mode'
 
 return {
     ['currentTas'] = currentTas,

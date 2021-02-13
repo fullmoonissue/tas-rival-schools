@@ -62,5 +62,6 @@ An overlay is displayed, you can hide it in `configuration/play.lua` by assignin
 
 ### Publications
 
-* [Score : 8600](https://www.youtube.com/watch?v=tLSHkkx0yy4)
+* [Score : 9000](https://www.youtube.com/watch?v=pKH3ChsgLFA)
+* Obsolete : [Score : 8600](https://www.youtube.com/watch?v=tLSHkkx0yy4)
 * Obsolete : [Score : 7100](https://www.youtube.com/watch?v=MzZUei7VKw4)
