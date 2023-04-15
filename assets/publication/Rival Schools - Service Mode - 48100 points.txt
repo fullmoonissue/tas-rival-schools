@@ -1,0 +1,70 @@
+Title : [TAS] Rival Schools : Service Mode - Maximum Score - 48100 points
+
+ℹ️  About the run
+
+* Emulator used : BizHawk 2.8 (https://github.com/TASVideos/BizHawk)
+* Aims for maximum score
+
+🏁  TAS of Service Mode
+
+This is the TAS of one of the four mini games, service mode.
+You play Natsu and you have to score by smashing faces.
+
+To unlock it, either :
+- finish the history mode with Natsu on the hardest difficulty
+- assign the value 65535 (0xFFFF) on the DWord 0x1F65D0 (it unlocks all mini-games)
+
+💯 Maximum score
+
+After making 39700, 42300, 44400, 44700 and 45800 points (cf TAS obsoleted), I've improved for the last time (?) the maximum score with 48100 points.
+
+The only improvement I see is to make a score of 6700 points for the shoots 4 and 6.
+Here are two unsuccessful attempts :
+- Hinata smashed 1 frame earlier : https://www.youtube.com/watch?v=iZUC2wqREBk
+- Shoma almost smashed : https://www.youtube.com/watch?v=u-TWHkK64i0
+
+💾  Memory addresses
+
+Body Angle :
+- 0x1EF90A (Word, Signed)
+- Range : -512 ... +512
+- Step increment : +/- 4 units per frame
+
+Shoot Angle :
+- 0x1EFA70 (Word, Unsigned)
+- Range : 0 ... 127
+- Step increment : + 1 unit per frame
+
+Shoot Power :
+- 0x1EFA74 (Word, Unsigned)
+- Range : 0 ... 2048 (cf Shoot power & Wait cycle for more info)
+- Step increment : + 24 units per frame
+
+➖  Raizo
+
+Even if Raizo substracts 200 points to the score, he's part of some shoots because more points are made thanks to the combo multiplier resulting to the smash of his face.
+
+🔋 Shoot power & Wait cycle
+
+There is 3 cycles of values :
+- from 0 to 2040 (next value is 16)
+- from 16 to 2032 (next value is 8)
+- from 8 to 2024 (next value is 0)
+
+Some shoots must have a certain power value, thus a cycle of power has to be ignored (by waiting) to have the wanted value.
+
+🚩  TAS obsoleted
+
+This TAS obsoletes five previous ones.
+
+Score 45800 (https://www.youtube.com/watch?v=4BiF5HwTYF4)
+Score 44700 (https://www.youtube.com/watch?v=reDowrCmnwY)
+Score 44400 (https://www.youtube.com/watch?v=q4O89Mz8Gr4)
+Score 42300 (https://www.youtube.com/watch?v=wj8WxkoHJx8)
+Score 39700 (https://www.youtube.com/watch?v=z3zAUFpW_Pw)
+
+🔗  Related TAS
+
+All Rival Schools mini games : https://www.youtube.com/playlist?list=PLOritzM6b1Y9ZDBmrjnljtHLCTkB1YcYT
+
+🍿 Enjoy 🍿

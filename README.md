@@ -1,4 +1,4 @@
-# Tas of Rival Schools
+# TAS of Rival Schools
 
 ## Watch in Bizhawk
 
@@ -6,13 +6,13 @@ First, select the tas you want to watch (variable `currentTas` in `configuration
 
 Then, launch Bizhawk, select the ROM and go to `Tools` -> `Lua Console` and open the `start.lua` file.
 
-## Tas of Lesson Mode
+## TAS of Lesson Mode
 
 ### Publication
 
 [100% - 21m06s](https://www.youtube.com/watch?v=e1RWETgbzBQ)
 
-## Tas of Home Run Mode
+## TAS of Home Run Mode
 
 ### Publications
 
@@ -39,26 +39,28 @@ If you want to see the overlay of the TAS of :
 
 Then repeat the section `Watch in Bizhawk`.
 
-## Tas of Service Mode
+## TAS of Service Mode
 
 ### Publications
 
-* [Score : 44700](https://www.youtube.com/watch?v=reDowrCmnwY)
+* [Score : 48100](https://www.youtube.com/watch?v=R-QgYA1QLpo)
+* Obsolete : [Score : 45800](https://www.youtube.com/watch?v=4BiF5HwTYF4)
+* Obsolete : [Score : 44700](https://www.youtube.com/watch?v=reDowrCmnwY)
 * Obsolete : [Score : 44400](https://www.youtube.com/watch?v=q4O89Mz8Gr4)
 * Obsolete : [Score : 42300](https://www.youtube.com/watch?v=wj8WxkoHJx8)
 * Obsolete : [Score : 39700](https://www.youtube.com/watch?v=z3zAUFpW_Pw)
 
 ### Overlay
 
-An overlay is displayed, you can hide it in `configuration/play.lua` by assigning `false` to `service-mode` > `show-overlay`.
+An overlay is displayed (in 44700 points video), you can hide it in `configuration/play.lua` by assigning `false` to `service-mode` > `show-overlay`.
 
-## Tas of Shoot Out Mode
+## TAS of Shoot Out Mode
 
 ### Publication
 
 [Fastest win](https://www.youtube.com/watch?v=zUQm26ttaK4)
 
-## Tas of Target Mode
+## TAS of Target Mode
 
 ### Publications
 
