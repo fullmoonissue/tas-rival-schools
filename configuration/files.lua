@@ -6,10 +6,6 @@ return {
     ['home-run-mode'] = {
         'init-and-shoots',
     },
-    ['target-mode'] = {
-        '0-init',
-        '1-shoots',
-    },
     ['service-mode'] = {
         '0-init',
         '1-shoots',

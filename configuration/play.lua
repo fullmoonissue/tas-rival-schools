@@ -10,9 +10,8 @@ local loadSlot = nil
     * lesson-mode : Hayato will teach you the skills you need to know to become a master
     * service-mode : Practice serving volleyballs (with Natsu)
     * shoot-out-mode : Play in the penalty kick shoot-out (with Roberto)
-    * target-mode : Knock out the score panels set up at the goal (with Roberto)
 ]]
-local currentTas = 'target-mode'
+local currentTas = 'home-run-mode'
 
 return {
     ['currentTas'] = currentTas,
