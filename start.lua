@@ -40,9 +40,7 @@ end
 
 -- Add overlays
 local mediator = require('mediator')()
-if 'service-mode' == currentTas and play['service-mode']['show-overlay'] then
-    require('plugins/overlay/service-mode').applySubscriptions(mediator)
-elseif 'home-run-mode' == currentTas then
+if 'home-run-mode' == currentTas then
     require('plugins/overlay/home-run-mode').applySubscriptions(mediator)
 else
     require('plugins/overlay/collection').applySubscriptions(mediator)
@@ -53,7 +51,6 @@ local screenshotConfiguration = require(paths['screenshot'])
 
 if ('home-run-mode' == currentTas and play['home-run-mode']['benchmark'] and play['home-run-mode']['show-benchmark-overlay'])
 or ('home-run-mode' == currentTas and not play['home-run-mode']['benchmark'] and play['home-run-mode']['show-overlay'])
-or ('service-mode' == currentTas and play['service-mode']['show-overlay'])
 then
     client.SetGameExtraPadding(0, 0, 350, 0)
 else

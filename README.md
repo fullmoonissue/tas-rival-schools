@@ -50,10 +50,6 @@ Then repeat the section `Watch in Bizhawk`.
 * Obsolete : [Score : 42300](https://www.youtube.com/watch?v=wj8WxkoHJx8)
 * Obsolete : [Score : 39700](https://www.youtube.com/watch?v=z3zAUFpW_Pw)
 
-### Overlay
-
-An overlay is displayed (in 44700 points video), you can hide it in `configuration/play.lua` by assigning `false` to `service-mode` > `show-overlay`.
-
 ## TAS of Shoot Out Mode
 
 ### Publication

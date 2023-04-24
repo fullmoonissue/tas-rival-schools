@@ -8,7 +8,6 @@ local loadSlot = nil
     Values :
     * home-run-mode : Play in the Home Run Contest (with Shoma)
     * lesson-mode : Hayato will teach you the skills you need to know to become a master
-    * service-mode : Practice serving volleyballs (with Natsu)
     * shoot-out-mode : Play in the penalty kick shoot-out (with Roberto)
 ]]
 local currentTas = 'home-run-mode'
@@ -20,8 +19,5 @@ return {
         ['show-overlay'] = false,
         ['benchmark'] = false,
         ['show-benchmark-overlay'] = false,
-    },
-    ['service-mode'] = {
-        ['show-overlay'] = true,
     },
 }
