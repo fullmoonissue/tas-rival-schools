@@ -1,0 +1,5 @@
+SystemID PSX
+1EFA70	w	u	0	MainRAM	Bottom <--> Top
+1EFA6E	w	s	0	MainRAM	Left <--> Right
+1C681C	d	u	0	MainRAM	Current Score
+

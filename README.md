@@ -64,6 +64,7 @@ An overlay is displayed (in 44700 points video), you can hide it in `configurati
 
 ### Publications
 
-* [Score : 9000](https://www.youtube.com/watch?v=pKH3ChsgLFA)
+* [Score : 9100](https://www.youtube.com/watch?v=3Q2vnzKDj90)
+* Obsolete : [Score : 9000](https://www.youtube.com/watch?v=pKH3ChsgLFA)
 * Obsolete : [Score : 8600](https://www.youtube.com/watch?v=tLSHkkx0yy4)
 * Obsolete : [Score : 7100](https://www.youtube.com/watch?v=MzZUei7VKw4)

@@ -1,0 +1,11 @@
+SystemID PSX
+1EFA00	d	u	0	MainRAM	P1 Life
+1EFC18	d	u	0	MainRAM	P1 Combo Level
+0	S	_	1
+1EFA74	w	u	0	MainRAM	Shoot power
+1EFA70	w	u	0	MainRAM	Shoot angle
+1EF90A	w	s	0	MainRAM	Body angle
+0	S	_	1		
+1F65D0	d	u	0	MainRAM	Unlocked modes
+0	S	_	1		
+
